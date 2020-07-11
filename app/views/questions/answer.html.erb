@@ -1,9 +1,9 @@
 <div id="userQuestion">
-<% if @user_question == "" %>
-  <p>[student mumbling...]</p>
-<% else %>
-  <p><%= @user_question.capitalize %></p>
-<% end %>
+  <% if @user_question == "" %>
+    <p>[student mumbling...]</p>
+  <% else %>
+    <p><%= @user_question.capitalize %></p>
+  <% end %>
   <p class="person">-You</p>
 </div>
 
@@ -19,4 +19,5 @@
   <% end %>
   <p class="person">-Your coach</p>
 </div>
-  <%= link_to 'Ask another question', ask_path, { id: 'askLink' }%>
+
+<%= link_to 'Ask another question', ask_path, { id: 'askLink' }%>
