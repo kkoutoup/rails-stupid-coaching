@@ -1,0 +1,8 @@
+<h1>Answers page</h1>
+<h2>User is asking:</h2>
+<p><%= @user_question.capitalize %></p>
+<%# <h2>Submit your answer below</h2>
+<form action="/answer" method="get">
+  <input type="text" name="question" placeholder="How can i...">
+  <input type="submit" value="Ask!">
+</form> %>
