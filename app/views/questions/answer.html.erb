@@ -1,8 +1,23 @@
 <h1>Answers page</h1>
-<h2>User is asking:</h2>
-<p><%= @user_question.capitalize %></p>
-<%# <h2>Submit your answer below</h2>
-<form action="/answer" method="get">
-  <input type="text" name="question" placeholder="How can i...">
-  <input type="submit" value="Ask!">
-</form> %>
+<div id="userQuestion">
+<% if @user_question == "" %>
+  <p>[student mambling...]</p>
+<% else %>
+  <p><%= @user_question.capitalize %></p>
+<% end %>
+  <p class="person">-You</p>
+</div>
+
+<div id="coachAnswer">
+  <% if @user_question == "I am going to work" %>
+    <p>Great!</p>
+  <% elsif @user_question.end_with?("?") %>
+    <p>Silly question, get dressed and go to work!</p>
+  <% elsif @user_question == "" %>
+    <p>What's that again?</p>
+  <% else %>
+    <p>I don't care, get dressed and go to work!</p>
+  <% end %>
+  <p class="person">-Your coach</p>
+</div>
+  <%= link_to 'Ask another question', ask_path, { id: 'askLink' }%>

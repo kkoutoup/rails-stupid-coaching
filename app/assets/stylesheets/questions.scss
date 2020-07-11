@@ -1,3 +1,48 @@
 // Place all the styles related to the Questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$blue: #0086b9;
+$light-grey: #b1b1b1;
+$medium-grey: #5b5b5b;
+$dark-grey: #505050;
+$black: #000000;
+$yellow: #FFFFE1;
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  color: $dark-grey;
+}
+
+#userQuestion, #coachAnswer{
+  width: 400px;
+  background-color: $light-grey;
+  border-left: 3px solid $dark-grey;
+  padding: 3px 5px;
+  color: $black;
+}
+
+#coachAnswer{
+  margin-top: 20px;
+  background-color: $yellow;
+}
+
+#askLink{
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: $blue;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+#subtitle{
+  color: $medium-grey;
+}
+
+.person{
+  font-style: italic;
+}
