@@ -46,3 +46,23 @@ h1{
 .person{
   font-style: italic;
 }
+
+#inputField{
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ced4da;
+  width: 30%;
+  height: 30px;
+}
+
+#submitButton{
+  color: #fff;
+  background-color: #337AB7;
+  border-color: #337AB7;
+  padding: 12px;
+  border: 1px solid transparent;
+  font-weight: bold;
+  &:hover{
+    cursor: pointer;
+  }
+}
